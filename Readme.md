@@ -1,0 +1,1 @@
+Aquest esel readme de la documentacio del projecte final
