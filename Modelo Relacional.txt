@@ -1,5 +1,0 @@
-Hoteles ("PaginaWeb", Nombre, Categoria, Telefono, PrecioNoche)
-	Busca (FK:"PaginaWeb", FK:"DNI")
-Usuario ("DNI", Nombre, Apellidos, Edad, Correo, Telefono)
-Ciudad ("Nombre", Poblacion)
-Ubicacion ("CodUbicacion", Latitud, Longitud)
