@@ -8,13 +8,13 @@ Este fue nuestro diagrama inicial, más tarde le añadimos varias tablas para fu
 ## Modelo relacional
 
 ```
-Usuario ("DNI", Nombre, Apellidos, Edad, Correo, Telefono)
-	Busca (PK:FK:"PaginaWeb", PK:FK:"DNI")
+Usuario ("ID", DNI, Nombre, Apellidos, Edad, Correo, Password, Telefono)
+	Busca (PK: "ID", FK:"Hoteles_id", FK:"Usuario_id")
 
-Hoteles ("PaginaWeb", Nombre, Categoria, Telefono, PrecioNoche)
-	Situado (PK:FK:"PaginaWeb", PK:FK:"Nombre")
+Hoteles ("ID", PaginaWeb, Nombre, Categoria, Telefono, PrecioNoche)
+	Situado (PK: "ID", FK:"Hoteles_id", FK:"Ciudad_id")
 
-Ubicacion ("CodUbicacion", Latitud, Longitud)	
-Ciudad ("Nombre", FK: CodUbicacion,  Poblacion)
+Ubicacion ("ID", CodUbicacion, Latitud, Longitud)	
+Ciudad ("ID", Nombre, FK: CodUbicacion,  Poblacion)
 ```
 (Modelo relacional del diagrama inicial)
