@@ -73,7 +73,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the id
 	 */
 	public int getId() {
 		return id;
@@ -81,7 +81,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param id
+	 * @param id the id to set
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -89,7 +89,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the dni
 	 */
 	public String getDni() {
 		return dni;
@@ -97,7 +97,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param dni
+	 * @param dni the dni to set
 	 */
 	public void setDni(String dni) {
 		this.dni = dni;
@@ -105,7 +105,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the nombre
 	 */
 	public String getNombre() {
 		return nombre;
@@ -113,7 +113,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param nombre
+	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
@@ -121,7 +121,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the apellidos
 	 */
 	public String getApellidos() {
 		return apellidos;
@@ -129,7 +129,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param apellidos
+	 * @param apellidos the apellidos to set
 	 */
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
@@ -137,7 +137,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the edad
 	 */
 	public int getEdad() {
 		return edad;
@@ -145,7 +145,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param edad
+	 * @param edad the edad to set
 	 */
 	public void setEdad(int edad) {
 		this.edad = edad;
@@ -153,7 +153,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the correo
 	 */
 	public String getCorreo() {
 		return correo;
@@ -161,7 +161,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param correo
+	 * @param correo the correo to set
 	 */
 	public void setCorreo(String correo) {
 		this.correo = correo;
@@ -169,7 +169,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the telefono
 	 */
 	public int getTelefono() {
 		return telefono;
@@ -177,7 +177,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param telefono
+	 * @param telefono the telefono to set
 	 */
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
@@ -185,7 +185,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the password
 	 */
 	public String getPassword() {
 		return password;
@@ -193,7 +193,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param password
+	 * @param password the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;
@@ -201,7 +201,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return
+	 * @return the role
 	 */
 	public String getRole() {
 		return role;
@@ -209,7 +209,7 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @param role
+	 * @param role the role to set
 	 */
 	public void setRole(String role) {
 		this.role = role;
