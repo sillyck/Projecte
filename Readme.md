@@ -1,1 +1,1 @@
-Aquest esel readme de la documentacio del projecte final
+Aquest es el readme de la documentacio del projecte final
