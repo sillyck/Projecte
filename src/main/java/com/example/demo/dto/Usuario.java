@@ -38,12 +38,14 @@ public class Usuario {
 	 * @param apellidos
 	 * @param correo
 	 * @param password
+	 * @param telefono
 	 */
-	public Usuario(String nombre, String apellidos, String correo, String password) {
+	public Usuario(String nombre, String apellidos, String correo, String password, int telefono) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.correo = correo;
 		this.password = password;
+		this.telefono = telefono;
 	}
 	
 	/**
