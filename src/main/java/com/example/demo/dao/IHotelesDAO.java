@@ -1,5 +1,8 @@
 package com.example.demo.dao;
 
-public interface IHotelesDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.demo.dto.Hoteles;
+
+public interface IHotelesDAO extends JpaRepository<Hoteles, Integer>{
 
 }
