@@ -9,10 +9,10 @@ Este fue nuestro diagrama inicial, más tarde le añadimos varias tablas para fu
 
 ```
 Usuario ("DNI", Nombre, Apellidos, Edad, Correo, Telefono)
-	Busca (FK:"PaginaWeb", FK:"DNI")
+	Busca (PK:FK:"PaginaWeb", PK:FK:"DNI")
 
 Hoteles ("PaginaWeb", Nombre, Categoria, Telefono, PrecioNoche)
-	Situado (FK:"PaginaWeb", FK:"Nombre")
+	Situado (PK:FK:"PaginaWeb", PK:FK:"Nombre")
 
 Ubicacion ("CodUbicacion", Latitud, Longitud)	
 Ciudad ("Nombre", FK: CodUbicacion,  Poblacion)
