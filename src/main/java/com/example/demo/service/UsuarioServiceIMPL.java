@@ -25,8 +25,7 @@ public class UsuarioServiceIMPL implements UserDetailsService {
 		if (usuario == null) {
 			throw new UsernameNotFoundException(username);
 		}
-		//return new User(usuario.getNombre(), usuario.getApellidos(), usuario.getCorreo(), usuario.getPassword(), usuario.getTelefono(), emptyList());
-		return null;
+		return new User(usuario.getNombre(), usuario.getPassword(), emptyList());
 	}
 
 }
