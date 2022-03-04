@@ -16,5 +16,5 @@ Hoteles ("PaginaWeb", Nombre, Categoria, Telefono, PrecioNoche)
 
 Ubicacion ("CodUbicacion", Latitud, Longitud)	
 Ciudad ("Nombre", FK: CodUbicacion,  Poblacion)
-´´´
+```
 (Modelo relacional del diagrama inicial)
