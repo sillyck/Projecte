@@ -16,31 +16,26 @@ public class HotelesServiceIMPL implements IHotelesService {
 	
 	@Override
 	public List<Hoteles> listarHoteles() {
-		// TODO Auto-generated method stub
 		return iHotelesDAO.findAll();
 	}
 
 	@Override
 	public Hoteles guardarHoteles(Hoteles Hoteles) {
-		// TODO Auto-generated method stub
 		return iHotelesDAO.save(Hoteles);
 	}
 
 	@Override
 	public Hoteles HotelesXID(int id) {
-		// TODO Auto-generated method stub
 		return iHotelesDAO.findById(id).get();
 	}
 
 	@Override
 	public Hoteles actualizarHoteles(Hoteles Hoteles) {
-		// TODO Auto-generated method stub
 		return iHotelesDAO.save(Hoteles);
 	}
 
 	@Override
 	public void eliminarHoteles(int id) {
-		// TODO Auto-generated method stub
 		iHotelesDAO.deleteById(id);
 	}
 
