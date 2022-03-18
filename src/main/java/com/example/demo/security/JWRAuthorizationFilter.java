@@ -18,11 +18,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import io.jsonwebtoken.Jwts;
 
-import com.example.demo.dto.Usuario;
-import com.fasterxml.jackson.databind.ObjectMapper;
 public class JWRAuthorizationFilter extends BasicAuthenticationFilter{
 	
-	private AuthenticationManager authenticationManager;
 	
 	public JWRAuthorizationFilter(AuthenticationManager authenticationManager) {
 		super(authenticationManager);
