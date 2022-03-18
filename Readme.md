@@ -1,3 +1,3 @@
 Aquest es el readme de la documentacio del projecte final
 
-![Diagrama](https://user-images.githubusercontent.com/97508353/156740718-3e1ee025-85cc-44f4-9042-cb016600006b.png)
+![Diagrama](https://user-images.githubusercontent.com/84329782/158967208-a329583e-48ea-40bf-bcbc-7c53f485bf49.PNG)

@@ -52,9 +52,9 @@ public class UsuarioController {
 		return iUsuarioDAO.findAll();
 	}
 	
-	@GetMapping("/users/{username}")
-	public Usuario getUsuario(@PathVariable String username) {
-		return iUsuarioDAO.findByUsername(username);
+	@GetMapping("/users/{nombre}")
+	public Usuario getUsuario(@PathVariable String nombre) {
+		return iUsuarioDAO.findByUsername(nombre);
 	}
 	
 	@DeleteMapping("/users/{id}")
