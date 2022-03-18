@@ -1,10 +1,14 @@
 package com.example.demo.dto;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name= "usuario")
@@ -14,8 +18,8 @@ public class Usuario {
 	private int id;
 	@Column(name="dni")
 	private String dni;
-	@Column(name="nombre")
-	private String nombre;
+	@Column(name="username")
+	private String username;
 	@Column(name="apellidos")
 	private String apellidos;
 	@Column(name="edad")
@@ -29,19 +33,23 @@ public class Usuario {
 	@Column(name="role")
 	private String role;
 	
+	@OneToMany
+	@JoinColumn(name = "id")
+	private List<Busca> busca;
+	
 	public Usuario() {
 		
 	}
 	
 	/**
-	 * @param nombre
+	 * @param username
 	 * @param apellidos
 	 * @param correo
 	 * @param password
 	 * @param telefono
 	 */
-	public Usuario(String nombre, String apellidos, String correo, String password, int telefono) {
-		this.nombre = nombre;
+	public Usuario(String username, String apellidos, String correo, String password, int telefono) {
+		this.username = username;
 		this.apellidos = apellidos;
 		this.correo = correo;
 		this.password = password;
@@ -51,7 +59,7 @@ public class Usuario {
 	/**
 	 * @param id
 	 * @param dni
-	 * @param nombre
+	 * @param username
 	 * @param apellidos
 	 * @param edad
 	 * @param correo
@@ -59,12 +67,12 @@ public class Usuario {
 	 * @param password
 	 * @param role
 	 */
-	public Usuario(int id, String dni, String nombre, String apellidos, int edad, String correo, int telefono,
+	public Usuario(int id, String dni, String username, String apellidos, int edad, String correo, int telefono,
 			String password, String role) {
 		//super();
 		this.id = id;
 		this.dni = dni;
-		this.nombre = nombre;
+		this.username = username;
 		this.apellidos = apellidos;
 		this.edad = edad;
 		this.correo = correo;
@@ -107,18 +115,18 @@ public class Usuario {
 
 	/**
 	 * 
-	 * @return the nombre
+	 * @return the username
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getUsername() {
+		return username;
 	}
 
 	/**
 	 * 
-	 * @param nombre the nombre to set
+	 * @param username the username to set
 	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	/**
