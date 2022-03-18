@@ -53,8 +53,8 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("/users/{nombre}")
-	public Usuario getUsuario(@PathVariable String username) {
-		return iUsuarioDAO.findByUsername(username);
+	public Usuario getUsuario(@PathVariable String nombre) {
+		return iUsuarioDAO.findByUsername(nombre);
 	}
 	
 	@DeleteMapping("/users/{id}")
