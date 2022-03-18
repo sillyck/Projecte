@@ -20,12 +20,12 @@ public class UsuarioServiceIMPL implements UserDetailsService {
 	}
 
 	@Override
-	public UserDetails loadUserByUsername(String nombre) throws UsernameNotFoundException {
-		Usuario usuario = iUsuarioDAO.findByUsername(nombre);
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		Usuario usuario = iUsuarioDAO.findByUsername(username);
 		if (usuario == null) {
-			throw new UsernameNotFoundException(nombre);
+			throw new UsernameNotFoundException(username);
 		}
-		return new User(usuario.getNombre(), usuario.getPassword(), emptyList());
+		return new User(usuario.getUsername(), usuario.getPassword(), emptyList());
 	}
 
 }
