@@ -39,4 +39,27 @@ public class UsuarioController {
 				.headers(responseHeaders)
 				.body("Response with header using ResponseEntity");
 	}
+	
+	@PostMapping("/users/")
+	public Usuario saveUsuario(@RequestBody Usuario user) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		iUsuarioDAO.save(user);
+		return user;
+	}
+	
+	@GetMapping("/users/")
+	public List<Usuario> getAllUsuarios() {
+		return iUsuarioDAO.findAll();
+	}
+	
+	@GetMapping("/users/{username}")
+	public Usuario getUsuario(@PathVariable String username) {
+		return iUsuarioDAO.findByUsername(username);
+	}
+	
+	@DeleteMapping("/users/{id}")
+	public String eliminarUser(@PathVariable(name="id")int id) {
+		iUsuarioDAO.deleteById(id);
+		return "User deleted.";
+	}
 }
