@@ -19,13 +19,13 @@ public class Hoteles {
 	private String nombre;
 	
 	@Column(name = "categoria")//no hace falta si se llama igual
-	private String categoria;
+	private int categoria;
 	
 	@Column(name = "telefono")//no hace falta si se llama igual
-	private String telefono;
+	private int telefono;
 	
 	@Column(name = "precioNoche")//no hace falta si se llama igual
-	private String precioNoche;
+	private double precioNoche;
 	
 	@OneToMany
 	@JoinColumn(name = "id")
@@ -39,7 +39,7 @@ public class Hoteles {
 		super();
 	}
 
-	public Hoteles(int id, String paginaweb, String nombre, String categoria, String telefono, String precioNoche,
+	public Hoteles(int id, String paginaweb, String nombre, int categoria, int telefono, double precioNoche,
 			List<Busca> busca, List<Situado> situado) {
 		super();
 		this.id = id;
@@ -76,27 +76,27 @@ public class Hoteles {
 		this.nombre = nombre;
 	}
 
-	public String getCategoria() {
+	public int getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
+	public void setCategoria(int categoria) {
 		this.categoria = categoria;
 	}
 
-	public String getTelefono() {
+	public int getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(String telefono) {
+	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
 
-	public String getPrecioNoche() {
+	public double getPrecioNoche() {
 		return precioNoche;
 	}
 
-	public void setPrecioNoche(String precioNoche) {
+	public void setPrecioNoche(double precioNoche) {
 		this.precioNoche = precioNoche;
 	}
 
