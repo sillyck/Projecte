@@ -23,11 +23,11 @@ public class Usuario {
 	@Column(name="apellidos")
 	private String apellidos;
 	@Column(name="edad")
-	private int edad;
+	private Integer edad;
 	@Column(name="correo")
 	private String correo;
 	@Column(name="telefono")
-	private int telefono;
+	private Integer telefono;
 	@Column(name="password")
 	private String password;
 	@Column(name="role")
@@ -48,13 +48,13 @@ public class Usuario {
 	 * @param password
 	 * @param telefono
 	 */
-	public Usuario(String username, String apellidos, String correo, String password, int telefono) {
+	/**public Usuario(String username, String apellidos, String correo, String password, int telefono) {
 		this.username = username;
 		this.apellidos = apellidos;
 		this.correo = correo;
 		this.password = password;
 		this.telefono = telefono;
-	}
+	}/**
 	
 	/**
 	 * @param id
@@ -149,17 +149,7 @@ public class Usuario {
 	 * 
 	 * @return the edad
 	 */
-	public int getEdad() {
-		return edad;
-	}
 
-	/**
-	 * 
-	 * @param edad the edad to set
-	 */
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 
 	/**
 	 * 
@@ -167,6 +157,14 @@ public class Usuario {
 	 */
 	public String getCorreo() {
 		return correo;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(Integer edad) {
+		this.edad = edad;
 	}
 
 	/**
@@ -189,7 +187,7 @@ public class Usuario {
 	 * 
 	 * @param telefono the telefono to set
 	 */
-	public void setTelefono(int telefono) {
+	public void setTelefono(Integer telefono) {
 		this.telefono = telefono;
 	}
 
