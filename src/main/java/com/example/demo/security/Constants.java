@@ -10,7 +10,7 @@ public class Constants {
 	
 	//JWT
 	
-	public static final String ISSUER_INFO = "Admin";
-	public static final String SUPER_SECRET_KEY = "EJM123";
+	public static final String ISSUER_INFO = "admin";
+	public static final String SUPER_SECRET_KEY = "1234";
 	public static final long TOKEN_EXPIRATION_TIME = 172800000; //2 DIAS
 }
