@@ -18,7 +18,7 @@ public class Ciudad {
 	private int id;
 	
 	@Column(name = "nombre")//no hace falta si se llama igual
-	private double nombre;
+	private String nombre;
 	
 	@Column(name = "poblacion")//no hace falta si se llama igual
 	private double poblacion;
@@ -31,7 +31,7 @@ public class Ciudad {
 		super();
 	}
 
-	public Ciudad(int id, double nombre, double poblacion, Ubicacion ubicacion) {
+	public Ciudad(int id, String nombre, double poblacion, Ubicacion ubicacion) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -47,11 +47,11 @@ public class Ciudad {
 		this.id = id;
 	}
 
-	public double getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(double nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
