@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="hoteles")
 public class Hoteles {
@@ -100,6 +102,8 @@ public class Hoteles {
 		this.precioNoche = precioNoche;
 	}
 
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Busca")
 	public List<Busca> getBusca() {
 		return busca;
 	}
@@ -108,6 +112,8 @@ public class Hoteles {
 		this.busca = busca;
 	}
 
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Situado")
 	public List<Situado> getSituado() {
 		return situado;
 	}
