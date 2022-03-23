@@ -27,13 +27,11 @@ public class CiudadController {
 	}
 
 	@GetMapping("/Ciudad/{id}")
-	public Ciudad CiudadXID(@PathVariable(name = "Codigo") int Codigo) {
+	public Ciudad CiudadXID(@PathVariable(name = "id") int Codigo) {
 
 		Ciudad Ciudad_xid = new Ciudad();
 
 		Ciudad_xid = CiudadServiceImpl.CiudadXID(Codigo);
-
-		System.out.println("Ciudad XID: " + Ciudad_xid);
 
 		return Ciudad_xid;
 	}
@@ -52,8 +50,6 @@ public class CiudadController {
 		Ciudad_seleccionado.setUbicacion(Ciudad.getUbicacion());
 
 		Ciudad_actualizado = CiudadServiceImpl.actualizarCiudad(Ciudad_seleccionado);
-
-		System.out.println("El Ciudad actualizado es: " + Ciudad_actualizado);
 
 		return Ciudad_actualizado;
 	}

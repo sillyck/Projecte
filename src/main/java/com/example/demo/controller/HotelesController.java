@@ -28,15 +28,14 @@ public class HotelesController {
 	}
 
 	@GetMapping("/Hoteles/{id}")
-	public Hoteles HotelesXID(@PathVariable(name = "Codigo") int Codigo) {
+	public Hoteles HotelesXID(@PathVariable(name = "id") int Codigo) {
 
 		Hoteles Hoteles_xid = new Hoteles();
 
 		Hoteles_xid = hotelesServiceImpl.HotelesXID(Codigo);
 
-		System.out.println("Hoteles XID: " + Hoteles_xid);
-
 		return Hoteles_xid;
+
 	}
 
 	@PutMapping("/Hoteles/{id}")
@@ -56,8 +55,6 @@ public class HotelesController {
 		Hoteles_seleccionado.setSituado(Hoteles.getSituado());
 
 		Hoteles_actualizado = hotelesServiceImpl.actualizarHoteles(Hoteles_seleccionado);
-
-		System.out.println("El Hoteles actualizado es: " + Hoteles_actualizado);
 
 		return Hoteles_actualizado;
 	}
