@@ -34,13 +34,11 @@ public class BuscaController {
 	}
 
 	@GetMapping("/Busca/{id}")
-	public Busca BuscaXID(@PathVariable(name = "Codigo") int Codigo) {
+	public Busca BuscaXID(@PathVariable(name = "id") int Codigo) {
 
 		Busca Busca_xid = new Busca();
 
 		Busca_xid = BuscaServiceImpl.BuscaXID(Codigo);
-
-		System.out.println("Busca XID: " + Busca_xid);
 
 		return Busca_xid;
 	}
@@ -58,8 +56,6 @@ public class BuscaController {
 		Busca_seleccionado.setHoteles(Busca.getHoteles());
 
 		Busca_actualizado = BuscaServiceImpl.actualizarBusca(Busca_seleccionado);
-
-		System.out.println("El Busca actualizado es: " + Busca_actualizado);
 
 		return Busca_actualizado;
 	}

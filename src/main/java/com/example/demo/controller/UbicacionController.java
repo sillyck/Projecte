@@ -35,13 +35,11 @@ public class UbicacionController {
 	}
 
 	@GetMapping("/Ubicacion/{id}")
-	public Ubicacion UbicacionXID(@PathVariable(name = "Codigo") int Codigo) {
+	public Ubicacion UbicacionXID(@PathVariable(name = "id") int Codigo) {
 
 		Ubicacion Ubicacion_xid = new Ubicacion();
 
 		Ubicacion_xid = UbicacionServiceImpl.UbicacionXID(Codigo);
-
-		System.out.println("Ubicacion XID: " + Ubicacion_xid);
 
 		return Ubicacion_xid;
 	}
@@ -59,8 +57,6 @@ public class UbicacionController {
 		Ubicacion_seleccionado.setLongitud(Ubicacion.getLongitud());
 
 		Ubicacion_actualizado = UbicacionServiceImpl.actualizarUbicacion(Ubicacion_seleccionado);
-
-		System.out.println("El Ubicacion actualizado es: " + Ubicacion_actualizado);
 
 		return Ubicacion_actualizado;
 	}
