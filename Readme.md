@@ -1,6 +1,6 @@
 ## End Points
 
-- **link:** https://reshotel.herokuapp.com/
+**link:** https://reshotel.herokuapp.com/
 - **/Hoteles:** Listar todos los hoteles
 - **/Ciudad:** Listar todas las ciudades
 - **/Busca:** Listar la tabla busca
