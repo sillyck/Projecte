@@ -1,8 +1,15 @@
 #ventana_principal {
-  position: absolute;
+    position: absolute;
 }
+
 #ventana_secundaria {
   position: relative;
   top: -400px;
   left: 5%;
+}
+
+iframe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
