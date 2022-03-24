@@ -1,0 +1,8 @@
+#ventana_principal {
+  position: absolute;
+}
+#ventana_secundaria {
+  position: relative;
+  top: -50vh;
+  left: 5%;
+}
