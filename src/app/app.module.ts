@@ -10,6 +10,8 @@ import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
 import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { BotonesLoginRegisterComponent } from './izquierda/botones-login-registe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
