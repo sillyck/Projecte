@@ -9,7 +9,6 @@ import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
 import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
-import { AgmCoreModule } from '@agm/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
