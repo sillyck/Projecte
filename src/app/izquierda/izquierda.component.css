@@ -1,7 +1,17 @@
 .panel {
-  background-color: rgb(204, 197, 197);
   width: 420px;
-  height: 900px;
   border-style: none;
 }
 
+.panel2 {
+  background-color:#bfe5f1;
+  width: 440px;
+  height: 850px;
+  border-style: none;
+  /*overflow-y: scroll*/
+}
+
+#boton {
+  position: fixed;
+  top: 50px;
+}

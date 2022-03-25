@@ -11,6 +11,8 @@ import { FiltrosComponent } from './izquierda/filtros/filtros.component';
 import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
 import { AgmCoreModule } from '@agm/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +26,6 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
-    })
   ],
   providers: [],
   bootstrap: [AppComponent]
