@@ -4,20 +4,17 @@ import { Component } from '@angular/core';
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css'],
-  template: `
-  <agm-map [latitude]="lat" [longitude]="lng"></agm-map>
-  `
 })
 export class MapaComponent {
 
   lat: number;
   lng: number;
-  zoom: number;
+  zoom: number; 
 
   constructor(){
-    this.lat = 40;
-    this.lng = -3;
-    this.zoom = 6;
+    this.lat = 41.118746913714624;
+    this.lng = 1.2445956472042103;
+    this.zoom = 15;
   }
 
 }
