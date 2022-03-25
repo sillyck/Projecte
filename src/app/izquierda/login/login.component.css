@@ -1,0 +1,18 @@
+.ventana {
+    background-color: #bfe5f1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.card {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.form-floating {
+    padding-bottom: 10px;
+}
