@@ -9,6 +9,7 @@ import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
 import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,14 @@ import { BotonesLoginRegisterComponent } from './izquierda/botones-login-registe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
