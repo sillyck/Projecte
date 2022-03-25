@@ -4,8 +4,8 @@
 
 #ventana_secundaria {
   position: relative;
-  top: -400px;
-  left: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
 }
 
 iframe {
