@@ -5,7 +5,16 @@
   </svg>
   </button>
 
-  <div  class="panel2 fw-bold shadow" *ngIf="show" @animacionAbrir>
-
+  <div  class="panel2 fw-bold shadow"  *ngIf="show" @animacionAbrir>
+    <div class="botones">
+      <a type="button" class="btn btn-light" (click)="abrirRegister()">Registrarse</a>
+      <a type="button" class="btn btn-warning" (click)="abrirLogin()">Iniciar Sessión</a>
+    </div>
+    <div class="login" *ngIf="mostrarLogin" @animacionAbrir>
+      <app-login></app-login>
+    </div>
+    <div class="register" *ngIf="mostrarRegister" @animacionAbrir>
+      <app-register></app-register>
+    </div>
   </div>
 </div>
