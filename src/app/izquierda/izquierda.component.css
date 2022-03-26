@@ -17,3 +17,13 @@
   position: fixed;
   top: 50px;
 }
+
+.botones {
+  background-color: #a0c8d4;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+

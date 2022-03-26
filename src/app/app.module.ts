@@ -8,9 +8,9 @@ import { IzquierdaComponent } from './izquierda/izquierda.component';
 import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
-import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegisterComponent,
     FiltrosComponent,
-    BotonesLoginRegisterComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

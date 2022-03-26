@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
+import { delay } from 'rxjs';
 
 
 @Component({
@@ -20,6 +21,8 @@ import { trigger, state, style, animate, transition, animation } from '@angular/
 })
 export class IzquierdaComponent implements OnInit {
   show: boolean = false;
+  mostrarLogin: boolean = false;
+  mostrarRegister: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -29,4 +32,14 @@ export class IzquierdaComponent implements OnInit {
     this.show = this.show ? false : true;
   }
 
+  abrirLogin() {
+    this.mostrarRegister = false;
+    this.mostrarLogin = this.mostrarLogin ? false : true;
+  }
+
+  abrirRegister() {
+    this.mostrarLogin = false;
+    this.mostrarRegister = this.mostrarRegister ? false : true;
+  }
 }
+
