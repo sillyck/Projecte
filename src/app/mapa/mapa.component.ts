@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-mapa',
@@ -9,7 +10,7 @@ export class MapaComponent {
 
   lat: number;
   lng: number;
-  zoom: number; 
+  zoom: number;
 
   constructor(){
     this.lat = 41.118746913714624;
