@@ -1,10 +1,20 @@
-<!-- <div class="cotenedor">
-  <div class="izquierda">
-    <img class="mb-4" src="../../assets/logo.png" alt="" width="50" height="50">
-    <h1>ResHotel</h1>
+<nav class="navbar navbar-light" style="background-color: #a0c8d4; width: 100vw;">
+  <div class="container d-flex flex-wrap">
+    <a class="navbar-brand imagen_logo" href=""><img class="mb-4" src="../../../assets/logo.png" alt="" width="50" height="50"></a>
+    <ul class="nav menu">
+      <li class="nav-item">
+        <a type="button" class="btn btn-warning" (click)="abrirLogin()">Iniciar Sessión</a>
+      </li>
+      <li class="nav-item"><a type="button" class="btn btn-light" (click)="abrirRegister()">Registrarse</a></li>
+      <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
+    </ul>
   </div>
-  <div class="derecha">
-      <button type="button" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
-  </div>
-</div> -->
+</nav>
+
+<div id="login" *ngIf="mostrarLogin" @animacionAbrir>
+  <app-login></app-login>
+</div>
+
+<div id="reg" *ngIf="mostrarRegister" @animacionAbrir>
+  <app-register></app-register>
+</div>

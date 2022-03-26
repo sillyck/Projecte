@@ -2,28 +2,22 @@
   width: 420px;
   height: 20%;
   border-style: none;
+
 }
 
 .panel2 {
   background-color:#bfe5f1;
   position: fixed;
   width: 27%;
-  height: 85%;
-  border-style: none;
+  height: 80%;
+  margin-top: -18.3%;
+  border-radius: 2%;
   /*overflow-y: scroll*/
 }
 
 #boton {
   position: fixed;
-  top: 50px;
+  top: 80px;
 }
 
-.botones {
-  background-color: #a0c8d4;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
 
