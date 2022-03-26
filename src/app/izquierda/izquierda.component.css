@@ -1,12 +1,14 @@
 .panel {
   width: 420px;
+  height: 20%;
   border-style: none;
 }
 
 .panel2 {
   background-color:#bfe5f1;
-  width: 440px;
-  height: 850px;
+  position: fixed;
+  width: 27%;
+  height: 85%;
   border-style: none;
   /*overflow-y: scroll*/
 }
