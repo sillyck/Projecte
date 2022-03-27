@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
+  formatLabel(value: number) {
+    return value + '€';
+  }
+
   estrellas:number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  botonApr(n: number) {
-    this.estrellas = n;
   }
 
 }
