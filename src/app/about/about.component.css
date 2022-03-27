@@ -1,5 +1,5 @@
 .contenedor-p {
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-color: #eeeeee;
 }
@@ -14,3 +14,5 @@
   background-color: #95bfcc;
   border-radius: 10px;
 }
+
+
