@@ -1,4 +1,4 @@
-<form class="m-4">
+<form class="m-4 d-flex flex-column justify-content-evenly">
   <input type="search" class="form-control  shadow" placeholder="Busca algo..." aria-label="Search">
   <div class="shadow">
     <label for="customRange2" class="form-label">Precio máximo por noche</label>
@@ -18,4 +18,17 @@
       <ngx-star-rating></ngx-star-rating>
     </div>
   </div>
+  <div class="shadow">
+    <label for="customRange2" class="form-label">Personaliza tu hotel!</label>
+    <div class="cajas d-flex flex-column justify-content-around">
+      <div class="row" style="margin-bottom: 10px;">
+        <mat-checkbox class="col"><i class="fa-solid fa-tree" style="color: green; margin-left: 10px;"> Eco</i></mat-checkbox>
+        <mat-checkbox class="col"><i class="fa-solid fa-heart" style="color: rgb(204, 107, 107);"> Actividad</i></mat-checkbox>
+      </div>
+      <div class="row">
+        <mat-checkbox class="col"><i class="fa-solid fa-carrot" style="color: rgb(255, 115, 0);"> Alm. Sostenible</i></mat-checkbox>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-warning shadow" style="background-color: #ffc107;">Buscar</button>
 </form>

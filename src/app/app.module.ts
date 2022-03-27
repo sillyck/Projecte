@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgxStarRatingModule } from 'ngx-star-rating';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
     AboutComponent
   ],
   imports: [
+    MatCheckboxModule,
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
