@@ -1,4 +1,4 @@
-div {
+.shadow {
   margin-top: 20px;
   background-color: #95bfcc;
   border-radius: 10px;
@@ -25,3 +25,6 @@ mat-slider {
   width: 250px;
 }
 
+.cajas {
+  margin-bottom: 10px;
+}

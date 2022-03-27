@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatSliderModule } from '@angular/material/slider';
     AboutComponent
   ],
   imports: [
+    MatCheckboxModule,
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
