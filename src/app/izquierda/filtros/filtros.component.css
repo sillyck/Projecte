@@ -1,0 +1,27 @@
+div {
+  margin-top: 20px;
+  background-color: #95bfcc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+div > label {
+  margin: 10px;
+}
+
+.estrellas {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+mat-slider {
+  width: 250px;
+}
+
