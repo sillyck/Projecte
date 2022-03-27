@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxStarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
