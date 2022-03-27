@@ -11,6 +11,8 @@ import { FiltrosComponent } from './izquierda/filtros/filtros.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     FiltrosComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent
   ],
   imports: [
+    MatSliderModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
