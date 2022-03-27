@@ -13,14 +13,9 @@
   </div>
   <div class="shadow">
     <label for="customRange3" class="form-label">Estrellas</label>
-    <mat-slider min="1" max="5" step="1" value="1" [value]="estrellas"></mat-slider>
     <!-- <input type="range" class="form-range w-75" min="1" max="5" id="customRange2"> -->
     <div class="estrellas" style="color: #ffc107;">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
+      <ngx-star-rating></ngx-star-rating>
     </div>
   </div>
   <div class="shadow">
