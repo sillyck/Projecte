@@ -1,9 +1,9 @@
 .contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 10vh;
 }
 
 nav {
@@ -15,7 +15,24 @@ nav {
 }
 
 ul {
-    margin-top: -8px;
+  margin-top: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav {
+  height: 15vh;
+}
+
+.imagen_logo{
+  margin-top: 8px;
+  margin-left: 25px;
+}
+
+ul {
+  margin-top: -16px;
 }
 
 #login {
