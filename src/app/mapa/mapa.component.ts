@@ -8,14 +8,8 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class MapaComponent {
 
-  lat: number;
-  lng: number;
-  zoom: number;
-
-  constructor(){
-    this.lat = 41.118746913714624;
-    this.lng = 1.2445956472042103;
-    this.zoom = 15;
-  }
+  lat: number = 41.118746913714624;
+  lng: number = 1.2445956472042103;
+  zoom: number = 15;
 
 }

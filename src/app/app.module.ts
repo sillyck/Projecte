@@ -15,8 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AgmCoreModule } from '@agm/core';
 import { PerfilComponent } from './perfil/perfil.component';
-
 
 @NgModule({
   declarations: [
@@ -36,7 +36,10 @@ import { PerfilComponent } from './perfil/perfil.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxStarRatingModule
+    NgxStarRatingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
