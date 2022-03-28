@@ -1,18 +1,16 @@
 .contenedor-p {
-  height: auto;
-  width: 100vw;
-  background-color: #eeeeee;
+    height: 100%;
+    width: 100vw;
+    background-color: #eeeeee;
 }
 
 .margenes {
-  padding: 50px;
+    padding: 50px;
 }
 
 .card {
-  height: 200px;
-  width: 60vw;
-  background-color: #95bfcc;
-  border-radius: 10px;
+    height: 200px;
+    width: 60vw;
+    background-color: #95bfcc;
+    border-radius: 10px;
 }
-
-
