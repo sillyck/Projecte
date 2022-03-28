@@ -1,17 +1,21 @@
-<div class="container d-flex flex-column">
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputUsername" class="form-label">Nombre de usuario</label>
-      <input type="email" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Registrar</button>
-  </form>
+<div class="card fw-bold shadow">
+  <main class="form-signin">
+    <form>
+      <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
+
+      <div class="form-floating">
+        <input type="username" class="form-control" id="floatingInput" placeholder="hola">
+        <label for="floatingInput">Nombre de usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Inicia sessión</button>
+    </form>
+  </main>
 </div>

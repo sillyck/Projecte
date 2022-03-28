@@ -1,35 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
-import { delay } from 'rxjs';
-
 
 @Component({
-  selector: 'app-izquierda',
-  templateUrl: './izquierda.component.html',
-  styleUrls: ['./izquierda.component.css'],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
   animations: [
     trigger('animacionAbrir',[
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-10px)' }),
-		    animate('200ms', style({ opacity: 1, transform: 'translateY(0)' })),
+		    animate('100ms', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
       transition(':leave', [
-        animate('200ms', style({ opacity: 0, transform: 'translateY(10px)' })),
+        animate('100ms', style({ opacity: 0, transform: 'translateY(1px)' })),
       ]),
     ])
   ]
 })
-export class IzquierdaComponent implements OnInit {
-  show: boolean = false;
+export class NavbarComponent implements OnInit {
   mostrarLogin: boolean = false;
   mostrarRegister: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  abrir() {
-    this.show = this.show ? false : true;
   }
 
   abrirLogin() {
@@ -41,5 +35,5 @@ export class IzquierdaComponent implements OnInit {
     this.mostrarLogin = false;
     this.mostrarRegister = this.mostrarRegister ? false : true;
   }
-}
 
+}

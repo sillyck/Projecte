@@ -8,8 +8,14 @@ import { IzquierdaComponent } from './izquierda/izquierda.component';
 import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
-import { BotonesLoginRegisterComponent } from './izquierda/botones-login-register/botones-login-register.component';
-import { AgmCoreModule } from '@agm/core';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +25,16 @@ import { AgmCoreModule } from '@agm/core';
     LoginComponent,
     RegisterComponent,
     FiltrosComponent,
-    BotonesLoginRegisterComponent
+    NavbarComponent,
+    AboutComponent
   ],
   imports: [
+    MatCheckboxModule,
+    MatSliderModule,
     BrowserModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
-    })
+    BrowserAnimationsModule,
+    NgxStarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
