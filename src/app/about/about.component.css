@@ -7,6 +7,7 @@
 
 .margenes {
     padding: 50px;
+    position: absolute;
 }
 
 .card {
@@ -14,4 +15,7 @@
     width: 60vw;
     background-color: #95bfcc;
     border-radius: 10px;
+    position: absolute;
+    margin-left: 380%;
 }
+
