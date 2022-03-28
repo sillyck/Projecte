@@ -1,6 +1,10 @@
+.principal {
+  background-color: #a8bcc2;
+  height: 100%;
+}
 .card {
   height: 170px;
-  width: auto;
+  width: 100vw;
   background-color: #5c838f;
   border-radius: 1px;
 }
@@ -11,4 +15,8 @@
   height: 150px;
   margin-right: 55vw;
   margin-top: 1.2vh;
+}
+
+#info {
+  background-color: #a8bcc2;
 }
