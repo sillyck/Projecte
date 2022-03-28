@@ -16,6 +16,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AgmCoreModule } from '@agm/core';
     RegisterComponent,
     FiltrosComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    PerfilComponent
   ],
   imports: [
     MatCheckboxModule,
