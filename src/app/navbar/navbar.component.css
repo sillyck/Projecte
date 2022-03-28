@@ -2,35 +2,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
 }
 
 nav {
-  height: 80px;
-  margin-top: -15px;
+    height: 80px;
+}
+
+.imagen_logo {
+    margin-top: 8px;
+}
+
+
+nav {
+  height: 11vh;
 }
 
 .imagen_logo{
-  margin-top: 8px;
+  margin-top: -4px;
+  margin-left: 37px;
 }
 
 ul {
-  margin-top: -8px;
+  margin-top: -25px;
 }
 
 #login {
-  position: absolute;
-  margin-left: 65%;
-  margin-top: -1%;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -1%;
 }
 
 #reg {
-  position: absolute;
-  margin-left: 71%;
-  margin-top: -1%;
+    position: absolute;
+    margin-left: 71%;
+    margin-top: -1%;
 }
 
 li {
-  margin: 10px;
+    margin: 10px;
 }
