@@ -8,6 +8,7 @@ import { IzquierdaComponent } from './izquierda/izquierda.component';
 import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,6 +31,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   ],
   imports: [
     MatCheckboxModule,
+    FormsModule,
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
