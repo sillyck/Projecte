@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     RegisterComponent,
     FiltrosComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    PerfilComponent
   ],
   imports: [
     MatCheckboxModule,

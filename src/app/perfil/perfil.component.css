@@ -1,0 +1,14 @@
+.card {
+  height: 170px;
+  width: auto;
+  background-color: #5c838f;
+  border-radius: 1px;
+}
+
+.circulo {
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin-right: 55vw;
+  margin-top: 1.2vh;
+}
