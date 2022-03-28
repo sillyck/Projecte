@@ -2,3 +2,10 @@ body {
     background-color: #eeeeee;
     margin: 0 0 0 0;
 }
+
+.container {
+    background-color: aqua;
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 15px;
+}
