@@ -13,7 +13,7 @@ Este fue nuestro diagrama inicial, más tarde le añadimos varias tablas para fu
 Usuario ("ID", DNI, Nombre, Apellidos, Edad, Correo, Password, Telefono)
 	Busca (PK: "ID", FK:"Hoteles_id", FK:"Usuario_id")
 
-Hoteles ("ID", PaginaWeb, Nombre, Categoria, Telefono, PrecioNoche)
+Hoteles ("ID", PaginaWeb, Nombre, Categoria, Telefono, PrecioNoche, Latitud, Longitud)
 	Situado (PK: "ID", FK:"Hoteles_id", FK:"Ciudad_id")
 
 Ubicacion ("ID", CodUbicacion, Latitud, Longitud)	
