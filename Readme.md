@@ -1,7 +1,8 @@
 # Documentación del proyecto
 
 ## Diagrama inicial
-![Diagrama](https://user-images.githubusercontent.com/84329782/158967354-bcf7b084-f33c-40dc-88cc-dbb35ec63ddd.PNG)
+![Diagrama](https://user-images.githubusercontent.com/84329782/160592117-2b501663-37a4-43c6-b943-6c1fd411445b.PNG)
+
 
 
 Este fue nuestro diagrama inicial, más tarde le añadimos varias tablas para futuras ampliaciones
