@@ -41,5 +41,9 @@ export class IzquierdaComponent implements OnInit {
     this.mostrarLogin = false;
     this.mostrarRegister = this.mostrarRegister ? false : true;
   }
-}
+
+//   obtenerFiltros(e: any){
+//     console.log(e);
+//   }
+ }
 
