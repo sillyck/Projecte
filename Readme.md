@@ -1,3 +1,44 @@
-Aquest es el readme de la documentacio del projecte final
+## End Points
 
-![Diagrama](https://user-images.githubusercontent.com/84329782/158967208-a329583e-48ea-40bf-bcbc-7c53f485bf49.PNG)
+**link:** https://reshotel.herokuapp.com/
+
+### Get
+
+- **/Hoteles:** Listar todos los hoteles
+- **/Ciudad:** Listar todas las ciudades
+- **/Busca:** Listar la tabla busca
+- **/Situado:** Listar la tabla situado
+- **/Ubicacion:** Listar todas la ubicaciones
+- **/users/:** Listar todos los usuarios
+- **x/{id}:** Obtener un registro por id
+
+### Post
+
+- **/login:** Obtener token
+- **/Hoteles:** Guardar Hotel
+- **/Ciudad:** Guardar ciudad
+- **/Busca:** Guardar busca
+- **/Situado:** Guardar situado
+- **/Ubicacion:** Guardar ubicacion
+- - **/users/:** Guardar usuario
+
+### Put
+
+- **x/{id}:** Actualizar registro
+
+### Delete
+
+- **x/{id}:** Borrar registro
+
+## Estructura JSON
+```
+[
+
+  {
+
+    "nombre_valor": "valor",
+
+  }
+
+]
+```
