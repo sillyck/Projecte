@@ -1,6 +1,9 @@
 <nav class="navbar navbar-light" style="background-color: #a0c8d4; width: 100vw;">
     <div class="container d-flex flex-wrap">
         <a class="navbar-brand imagen_logo" href=""><img class="mb-4" src="../../../assets/logo.png" alt="" width="50" height="50"></a>
+        <div *ngFor="let user of us">
+          <p class="mt-3 ms-4">{{user.data}}</p>
+        </div>
         <ul class="nav menu">
             <li class="nav-item">
                 <a type="button" class="btn btn-warning" (click)="abrirLogin()">Iniciar Sessión</a>
@@ -12,7 +15,9 @@
 </nav>
 
 <div id="login" *ngIf="mostrarLogin" @animacionAbrir>
-    <app-login></app-login>
+  <div class="submit-form">
+      <app-login></app-login>
+  </div>
 </div>
 
 <div id="reg" *ngIf="mostrarRegister" @animacionAbrir>

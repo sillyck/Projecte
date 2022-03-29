@@ -1,17 +1,18 @@
 <div class="card fw-bold shadow">
     <main class="form-signin">
-        <form>
-            <h1 class="h3 mb-3 fw-normal">Iniciar sessión</h1>
-
-        <div class="form-floating">
-          <input type="username" class="form-control" id="floatingInput">
-          <label for="floatingInput"  required [(ngModel)]="login.username" name="username">Nombre de usuario</label>
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+              <h1 class="h3 mb-3 fw-normal">Iniciar sessión</h1>
+          <div class="form-floating">
+            <input id="floatingInput" type="text" class="form-control" id="username" placeholder="123456" required [(ngModel)]="login.username" name="username">
+            <label for="floatingInput" class="form-label">Username</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="login.password" name="password">
+            <label for="floatingPassword" class="form-label">Password</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="logUser(); usuarioEntrante()">Inicia sessión</button>
         </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword" required [(ngModel)]="login.password" name="password">Contraseña</label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Inicia sessión</button>
-      </form>
+      </div>
     </main>
 </div>

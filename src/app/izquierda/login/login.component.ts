@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
-import {LoginService} from '../../login.service'
+import {LoginService} from '../../servicios/login.service'
+import { UserPerfilService } from 'src/app/servicios/user-perfil.service';
 
 @Component({
   selector: 'app-login',
@@ -28,10 +29,16 @@ export class LoginComponent implements OnInit {
   };
 
   submitted = false;
-
-  constructor(private loginService: LoginService) { }
+  @Input() usuario:any;
+  constructor(private loginService: LoginService, private servicioPerfil: UserPerfilService) { }
 
   ngOnInit(): void {
+  }
+
+  usuarioEntrante(){
+    //console.log(this.login.username)
+    this.servicioPerfil.disPerfil.emit({data:this.login.username
+    })
   }
 
   logUser(): void {

@@ -1,11 +1,11 @@
 <div id="ventana_principal">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" *ngFor="let per of hoteles">
+        <agm-marker [latitude]="hoteles.latitud" [longitude]="hoteles.longitud"></agm-marker>
     </agm-map>
     <div id="navegador">
         <app-navbar></app-navbar>
     </div>
     <div id="ventana_secundaria">
-        <app-izquierda></app-izquierda>
+        <app-izquierda (EP_max)="obtenerPrecio($event)" (EEstrellas)="obtenerEstrellas($event)"></app-izquierda>
     </div>
 </div>
