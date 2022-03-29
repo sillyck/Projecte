@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
-
+import {LoginService} from '../../login.service'
 
 @Component({
   selector: 'app-login',
@@ -20,11 +20,39 @@ import { trigger, state, style, animate, transition, animation } from '@angular/
 })
 export class LoginComponent implements OnInit {
 
-  show: boolean = false;
+  token: any = 'token inicial';
 
-  constructor() { }
+  login: any = {
+    username: '',
+    password: ''
+  };
+
+  submitted = false;
+
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  logUser(): void {
+    const data = {
+      username: this.login.username,
+      password: this.login.password,
+    };
+
+    this.loginService.signup(data)
+      .subscribe(
+        response => {
+          this.token = response;
+          this.submitted = true;
+          console.log(response);
+          window.sessionStorage.setItem("auth-token", this.token.token);
+          window.sessionStorage.setItem("auth-username", this.login.username);
+        },
+        error => {
+          console.log(error);
+        });
+
   }
 
 }

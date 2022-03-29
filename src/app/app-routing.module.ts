@@ -4,6 +4,7 @@ import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AboutComponent } from './about/about.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path:'',
     component:MapaComponent
+  },
+  {
+    path:'perfil',
+    component:PerfilComponent
   }
 
 ];

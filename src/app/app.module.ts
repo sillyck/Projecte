@@ -8,6 +8,7 @@ import { IzquierdaComponent } from './izquierda/izquierda.component';
 import { LoginComponent } from './izquierda/login/login.component';
 import { RegisterComponent } from './izquierda/register/register.component';
 import { FiltrosComponent } from './izquierda/filtros/filtros.component';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,6 +17,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
+import { PerfilComponent } from './perfil/perfil.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import { AgmCoreModule } from '@agm/core';
     RegisterComponent,
     FiltrosComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    PerfilComponent,
   ],
   imports: [
     MatCheckboxModule,
+    FormsModule,
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +42,8 @@ import { AgmCoreModule } from '@agm/core';
     NgxStarRatingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
