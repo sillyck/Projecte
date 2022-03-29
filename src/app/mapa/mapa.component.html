@@ -1,7 +1,12 @@
 <div id="ventana_principal">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" *ngFor="let per of hoteles">
+    <div *ngIf="hoteles; else esNull">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" *ngFor="let per of hoteles" >
         <agm-marker [latitude]="hoteles.latitud" [longitude]="hoteles.longitud"></agm-marker>
-    </agm-map>
+      </agm-map>
+    </div>
+    <ng-template #esNull>
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"></agm-map>
+    </ng-template>
     <div id="navegador">
         <app-navbar></app-navbar>
     </div>
