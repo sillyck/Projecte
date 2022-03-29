@@ -25,9 +25,9 @@
         <input type="password" placeholder="Contraseña" id="password">
 
         <div>
-            <button id="login">Log In</button>
+            <button id="login" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Log In</button>
             <hr>
-            <button id="register">Register</button>
+            <button id="register" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
         </div>
     </form>
 </body>
