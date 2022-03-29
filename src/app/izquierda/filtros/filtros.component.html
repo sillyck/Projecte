@@ -1,8 +1,23 @@
 <form class="m-4 d-flex flex-column justify-content-evenly">
-    <input type="search" class="form-control  shadow" placeholder="Busca algo..." aria-label="Search">
-    <div class="shadow">
-        <label for="customRange2" class="form-label">Precio máximo por noche</label>
-        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="500" step="auto" min="0" max="500" aria-label="units" [(ngModel)]="precio_max"></mat-slider>
+  <input type="search" class="form-control  shadow" placeholder="Busca algo..." aria-label="Search">
+  <div class="shadow">
+    <label for="customRange2" class="form-label">Precio máximo por noche</label>
+    <mat-slider
+    thumbLabel
+    [displayWith]="formatLabel"
+    tickInterval="500"
+    step="auto"
+    min="0"
+    max="500"
+    aria-label="units"
+    [(ngModel)]="precio_max"
+    name="precio"></mat-slider>
+  </div>
+  <div class="shadow">
+    <label for="customRange3" class="form-label">Estrellas</label>
+    <!-- <input type="range" class="form-range w-75" min="1" max="5" id="customRange2"> -->
+    <div class="estrellas" style="color: #ffc107;">
+      <ngx-star-rating [(ngModel)]="estrellas" name="estrellas"></ngx-star-rating>
     </div>
     <div class="shadow">
         <label for="customRange3" class="form-label">Estrellas</label>

@@ -6,6 +6,6 @@
   </button>
 
   <div  class="panel2 fw-bold shadow"  *ngIf="show" @animacionAbrir>
-    <app-filtros></app-filtros>
+    <app-filtros (EP_max)="obtenerPrecio($event)" (EEstrellas)="obtenerEstrellas($event)"></app-filtros>
   </div>
 </div>
