@@ -1,10 +1,18 @@
-.card {
+input,
+textarea {
+    background-color: #d0e0f0;
+    border-radius: 10px;
+    padding: 12px 15px 12px 15px;
     width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-    margin-top: 20px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400
 }
-.form-floating {
-    padding-bottom: 10px;
+
+#main {
+    background-color: #a0c8d4;
+    width: 100vw;
+    height: 100vh;
 }
