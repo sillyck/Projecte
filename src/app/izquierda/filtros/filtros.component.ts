@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 
 @Component({
@@ -19,12 +19,20 @@ import { trigger, state, style, animate, transition, animation } from '@angular/
 })
 export class FiltrosComponent implements OnInit {
 
+  precio_max:number = 0;
+  estrellas:number = 0;
+
+  @Output() EP_max = new EventEmitter<number>();
+  @Output() EEstrellas = new EventEmitter<number>();
+
+  ejecutarEvento(){
+    this.EP_max.emit(this.precio_max);
+    this.EEstrellas.emit(this.estrellas);
+  }
 
   formatLabel(value: number) {
     return value + '€';
   }
-
-  estrellas:number = 0;
 
   constructor() {
    }
