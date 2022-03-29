@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { delay } from 'rxjs';
 
@@ -23,6 +23,10 @@ export class IzquierdaComponent implements OnInit {
   show: boolean = false;
   mostrarLogin: boolean = false;
   mostrarRegister: boolean = false;
+
+  @Output() EP_max = new EventEmitter<number>();
+  @Output() EEstrellas = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -42,8 +46,13 @@ export class IzquierdaComponent implements OnInit {
     this.mostrarRegister = this.mostrarRegister ? false : true;
   }
 
-//   obtenerFiltros(e: any){
-//     console.log(e);
-//   }
+  obtenerPrecio(e: any){
+    this.EP_max.emit(e);
+  }
+
+  obtenerEstrellas(e: any){
+    this.EEstrellas.emit(e);
+  }
+
  }
 

@@ -6,6 +6,6 @@
         <app-navbar></app-navbar>
     </div>
     <div id="ventana_secundaria">
-        <app-izquierda></app-izquierda>
+        <app-izquierda (EP_max)="obtenerPrecio($event)" (EEstrellas)="obtenerEstrellas($event)"></app-izquierda>
     </div>
 </div>
