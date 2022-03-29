@@ -35,13 +35,11 @@ public class SituadoController {
 	}
 
 	@GetMapping("/Situado/{id}")
-	public Situado SituadoXID(@PathVariable(name = "Codigo") int Codigo) {
+	public Situado SituadoXID(@PathVariable(name = "id") int Codigo) {
 
 		Situado Situado_xid = new Situado();
 
 		Situado_xid = SituadoServiceImpl.SituadoXID(Codigo);
-
-		System.out.println("Situado XID: " + Situado_xid);
 
 		return Situado_xid;
 	}
@@ -59,8 +57,6 @@ public class SituadoController {
 		Situado_seleccionado.setHoteles(Situado.getHoteles());
 
 		Situado_actualizado = SituadoServiceImpl.actualizarSituado(Situado_seleccionado);
-
-		System.out.println("El Situado actualizado es: " + Situado_actualizado);
 
 		return Situado_actualizado;
 	}
