@@ -1,9 +1,46 @@
-<div class="principal">
-  <app-navbar></app-navbar>
-  <div class="card shadow d-flex flex-row justify-content-evenly">
-    <div class="circulo rounded-circle bg-light" style="background-image: url(../../assets/eloy.png);" (click)="escalar()"></div>
-  </div>
-  <div class="card shadow d-flex flex-row justify-content-evenly" id="info">
-
-  </div>
+<app-navbar></app-navbar>
+<div id="main" class="d-flex flex-column justify-content-center" style="align-items: center;">
+    <div id="foto">
+        <div class="card-body ">
+            <div class="d-flex flex-column align-items-center text-center">
+                <img src="assets/perfil.png" alt="imagen" class="rounded-circle" width="150">
+                <div class="mt-3">
+                    <h4>Nombre y Apellidos</h4>
+                    <p class="text-muted font-size-sm">Rol</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="texto" class="col-sm-3">
+        <div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4 class="mb-1">Correo</h4>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        Correo
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4 class="mb-0">Telefono</h4>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        Telefono
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4 class="mb-0">Edad</h4>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        Edad
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

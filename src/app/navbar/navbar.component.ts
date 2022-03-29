@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
+import { Router } from '@angular/router';
 import { UserPerfilService } from '../servicios/user-perfil.service';
+import { LoginService } from '../servicios/login.service';
+import { UserService } from '../servicios/user.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -26,15 +30,25 @@ import { UserPerfilService } from '../servicios/user-perfil.service';
 export class NavbarComponent implements OnInit {
   mostrarLogin: boolean = false;
   mostrarRegister: boolean = false;
-  botonLogin: boolean = true;
+  // botonLogin: boolean = true;
+  loggedIn: boolean = false;
 
-  constructor(private servicioPerfil: UserPerfilService) { }
+  constructor(private loginService: LoginService, private userService: UserService) { }
   public us:Array<any> = []
+  user:any
   ngOnInit(): void {
-    this.servicioPerfil.disPerfil.subscribe(data => {
-      console.log('Recibiendo datos...', data);
-      this.us.push(data);
-    } )
+    // this.servicioPerfil.disPerfil.subscribe(data => {
+    //   console.log('Recibiendo datos...', data);
+    //   this.user.push(data);
+    // } )
+    this.loginService.getUser$().subscribe(user => {
+      this.user = user;
+    });
+  }
+
+  logout(): void {
+    window.sessionStorage.clear();
+    this.user.username = '';
   }
 
   abrirLogin() {
@@ -47,10 +61,10 @@ export class NavbarComponent implements OnInit {
     this.mostrarRegister = this.mostrarRegister ? false : true;
   }
 
-  quitarBoton() {
-    this.mostrarLogin = false;
-    this.mostrarRegister = false;
-    this.botonLogin = this.botonLogin ? true : false;
-  }
+  // quitarBoton() {
+  //   this.mostrarLogin = false;
+  //   this.mostrarRegister = false;
+  //   this.botonLogin = this.botonLogin ? true : false;
+  // }
 
 }
