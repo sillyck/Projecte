@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
-import {LoginService} from '../../login.service'
+import {LoginService} from '../../servicios/login.service'
 
 @Component({
   selector: 'app-login',

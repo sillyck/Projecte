@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 
 @Component({
@@ -18,6 +18,7 @@ import { trigger, state, style, animate, transition, animation } from '@angular/
   ]
 })
 export class NavbarComponent implements OnInit {
+  @Input() usuario:any;
   mostrarLogin: boolean = false;
   mostrarRegister: boolean = false;
 
