@@ -1,4 +1,4 @@
-<div id="main" *ngIf="!submitted">
+<!-- <div id="main" *ngIf="!submitted">
     <div class="row justify-content-center my-auto">
         <form class="col-md-2 col-10 my-5">
             <div class="row justify-content-center"></div>
@@ -8,4 +8,26 @@
             <div class="row justify-content-center my-3 px-3"> <button type="submit" class="btn-block btn-color" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Iniciar sessión</button> </div>
         </form>
     </div>
-</div>
+</div> -->
+
+<body>
+    <form>
+        <img src="assets/logo.png" height="70px" width="70px">
+
+        <br>
+
+        <label for="username"><b>Usuario</b></label>
+        <input type="text" placeholder="Usuario" id="username">
+
+        <br>
+
+        <label for="password"><b>Contraseña</b></label>
+        <input type="password" placeholder="Contraseña" id="password">
+
+        <div>
+            <button id="login">Log In</button>
+            <hr>
+            <button id="register">Register</button>
+        </div>
+    </form>
+</body>
