@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
+import { UserPerfilService } from '../servicios/user-perfil.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,17 +15,26 @@ import { trigger, state, style, animate, transition, animation } from '@angular/
       transition(':leave', [
         animate('100ms', style({ opacity: 0, transform: 'translateY(1px)' })),
       ]),
-    ])
+    ]),
+    trigger('visualizacion', [
+      transition(':leave', [
+        animate('50ms', style({ opacity: 0, transform: 'translateY(0)' })),
+      ]),
+    ]),
   ]
 })
 export class NavbarComponent implements OnInit {
-  @Input() usuario:any;
   mostrarLogin: boolean = false;
   mostrarRegister: boolean = false;
+  botonLogin: boolean = true;
 
-  constructor() { }
-
+  constructor(private servicioPerfil: UserPerfilService) { }
+  public us:Array<any> = []
   ngOnInit(): void {
+    this.servicioPerfil.disPerfil.subscribe(data => {
+      console.log('Recibiendo datos...', data);
+      this.us.push(data);
+    } )
   }
 
   abrirLogin() {
@@ -35,6 +45,12 @@ export class NavbarComponent implements OnInit {
   abrirRegister() {
     this.mostrarLogin = false;
     this.mostrarRegister = this.mostrarRegister ? false : true;
+  }
+
+  quitarBoton() {
+    this.mostrarLogin = false;
+    this.mostrarRegister = false;
+    this.botonLogin = this.botonLogin ? true : false;
   }
 
 }
