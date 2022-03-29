@@ -13,12 +13,16 @@ const routes: Routes = [
     component:AboutComponent
   },
   {
-    path:'',
+    path:'home',
     component:MapaComponent
   },
   {
     path:'perfil',
     component:PerfilComponent
+  },
+  {
+    path:'',
+    component:LoginComponent
   }
 
 ];

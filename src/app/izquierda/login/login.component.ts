@@ -29,17 +29,12 @@ export class LoginComponent implements OnInit {
   };
 
   submitted = false;
-  @Input() usuario:any;
+  // @Input() usuario:any;
   constructor(private loginService: LoginService, private servicioPerfil: UserPerfilService) { }
 
   ngOnInit(): void {
   }
 
-  usuarioEntrante(){
-    //console.log(this.login.username)
-    this.servicioPerfil.disPerfil.emit({data:this.login.username
-    })
-  }
 
   logUser(): void {
     const data = {
@@ -60,6 +55,13 @@ export class LoginComponent implements OnInit {
           console.log(error);
         });
 
+  }
+  sesionUsername = window.sessionStorage.getItem("auth-token");
+  sesionToken = window.sessionStorage.getItem("auth-username");
+  usuarioEntrante(){
+    //console.log(this.login.username)
+    this.servicioPerfil.disPerfil.emit({data:this.sesionUsername, data2:this.sesionToken
+    })
   }
 
 }
