@@ -12,4 +12,6 @@ export class MapaComponent {
   lng: number = 1.2445956472042103;
   zoom: number = 15;
 
+
+
 }

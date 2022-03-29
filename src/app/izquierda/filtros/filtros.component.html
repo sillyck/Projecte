@@ -9,13 +9,14 @@
     step="auto"
     min="0"
     max="500"
-    aria-label="units"></mat-slider>
+    aria-label="units"
+    [(ngModel)]="precio_max")]></mat-slider>
   </div>
   <div class="shadow">
     <label for="customRange3" class="form-label">Estrellas</label>
     <!-- <input type="range" class="form-range w-75" min="1" max="5" id="customRange2"> -->
     <div class="estrellas" style="color: #ffc107;">
-      <ngx-star-rating></ngx-star-rating>
+      <ngx-star-rating [(ngModel)]="estrellas")]></ngx-star-rating>
     </div>
   </div>
   <div class="shadow">
@@ -30,5 +31,5 @@
       </div>
     </div>
   </div>
-  <button class="btn btn-warning shadow" style="background-color: #ffc107;">Buscar</button>
+  <button class="btn btn-warning shadow" style="background-color: #ffc107;" (click)="ejecutarEvento()">Buscar</button>
 </form>
