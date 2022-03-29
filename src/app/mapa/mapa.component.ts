@@ -17,7 +17,7 @@ export class MapaComponent {
 
   constructor(private hotelesService: HotelesService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.hoteles.retornar()
       .subscribe( (result: any) => this.hoteles = result)
   }
