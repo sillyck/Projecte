@@ -29,6 +29,12 @@ public class Hoteles {
 	@Column(name = "precioNoche")//no hace falta si se llama igual
 	private double precioNoche;
 	
+	@Column(name = "latitud")//no hace falta si se llama igual
+	private double latitud;
+	
+	@Column(name = "longitud")//no hace falta si se llama igual
+	private double longitud;
+	
 	@OneToMany
 	@JoinColumn(name = "id")
 	private List<Busca> busca;
@@ -36,13 +42,9 @@ public class Hoteles {
 	@OneToMany
 	@JoinColumn(name = "id")
 	private List<Situado> situado;
-
-	public Hoteles() {
-		super();
-	}
-
+	
 	public Hoteles(int id, String paginaweb, String nombre, int categoria, int telefono, double precioNoche,
-			List<Busca> busca, List<Situado> situado) {
+			double latitud, double longitud, List<Busca> busca, List<Situado> situado) {
 		super();
 		this.id = id;
 		this.paginaweb = paginaweb;
@@ -50,8 +52,14 @@ public class Hoteles {
 		this.categoria = categoria;
 		this.telefono = telefono;
 		this.precioNoche = precioNoche;
+		this.latitud = latitud;
+		this.longitud = longitud;
 		this.busca = busca;
 		this.situado = situado;
+	}
+
+	public Hoteles() {
+		super();
 	}
 
 	public int getId() {
@@ -102,6 +110,22 @@ public class Hoteles {
 		this.precioNoche = precioNoche;
 	}
 
+	public double getLatitud() {
+		return latitud;
+	}
+
+	public void setLatitud(double latitud) {
+		this.latitud = latitud;
+	}
+
+	public double getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
+	}
+	
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Busca")
 	public List<Busca> getBusca() {
@@ -125,8 +149,8 @@ public class Hoteles {
 	@Override
 	public String toString() {
 		return "Hoteles [id=" + id + ", paginaweb=" + paginaweb + ", nombre=" + nombre + ", categoria=" + categoria
-				+ ", telefono=" + telefono + ", precioNoche=" + precioNoche + ", busca=" + busca + ", situado="
-				+ situado + "]";
+				+ ", telefono=" + telefono + ", precioNoche=" + precioNoche + ", latitud=" + latitud + ", longitud="
+				+ longitud + ", busca=" + busca + ", situado=" + situado + "]";
 	}
 	
 }

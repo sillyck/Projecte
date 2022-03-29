@@ -51,6 +51,8 @@ public class HotelesController {
 		Hoteles_seleccionado.setNombre(Hoteles.getNombre());
 		Hoteles_seleccionado.setCategoria(Hoteles.getCategoria());
 		Hoteles_seleccionado.setTelefono(Hoteles.getTelefono());
+		Hoteles_seleccionado.setLatitud(Hoteles.getLatitud());
+		Hoteles_seleccionado.setLongitud(Hoteles.getLongitud());
 		Hoteles_seleccionado.setBusca(Hoteles.getBusca());
 		Hoteles_seleccionado.setSituado(Hoteles.getSituado());
 
