@@ -11,8 +11,12 @@
             <input type="password" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="login.password" name="password">
             <label for="floatingPassword" class="form-label">Password</label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="logUser(); usuarioEntrante()">Inicia sessión</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Inicia sessión</button>
         </div>
+        <!-- ; usuarioEntrante() -->
+        <!-- <div *ngIf="submitted">
+          <h4>Bienvenido {{login.username}}</h4>
+        </div> -->
       </div>
     </main>
 </div>
