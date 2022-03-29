@@ -18,6 +18,7 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { PerfilComponent } from './perfil/perfil.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     FiltrosComponent,
     NavbarComponent,
     AboutComponent,
-    PerfilComponent
+    PerfilComponent,
   ],
   imports: [
     MatCheckboxModule,
@@ -41,7 +42,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     NgxStarRatingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD59cw4fBvhvtRTgPoyQ5HcSy_6RXuh2uU'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

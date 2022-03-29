@@ -3,11 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 10vh;
-}
-
-nav {
-    height: 80px;
+  height: 9vh;
 }
 
 .imagen_logo {
@@ -16,7 +12,7 @@ nav {
 
 
 nav {
-  height: 11vh;
+  height: 9.5vh;
 }
 
 .imagen_logo{
