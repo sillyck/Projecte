@@ -14,16 +14,16 @@ export interface User {
 export class LoginService {
 
   private user: any;
-  // private user$: Subject<any>; // Subject que emite información a componentes
+  private user$: Subject<any>; // Subject que emite información a componentes
 
   constructor(private http: HttpClient) {
-    // this.user$ = new Subject();
+    this.user$ = new Subject();
   }
 
   signup(data: any) {
     console.log(data);
     this.user = data;
-    // this.user$.next(this.user);
+    this.user$.next(this.user);
     return this.http.post(`${baseUrl}/login`, data);
   }
 

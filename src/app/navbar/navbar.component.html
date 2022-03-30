@@ -5,7 +5,7 @@
           <p class="mt-3 ms-4">{{user.data2}}</p>
         </div> -->
         <ul class="nav menu">
-            <!-- <p *ngIf="user!=undefined" class="nav-link">{{user.username}}</p> -->
+            <p *ngIf="user!=undefined" class="nav-link">{{user.username}}</p>
             <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
         </ul>
     </div>

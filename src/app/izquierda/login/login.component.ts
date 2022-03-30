@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import {LoginService} from '../../servicios/login.service'
-import { UserPerfilService } from 'src/app/servicios/user-perfil.service';
+import { UserService } from 'src/app/servicios/user.service';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +22,8 @@ import { UserPerfilService } from 'src/app/servicios/user-perfil.service';
 export class LoginComponent implements OnInit {
 
   token: any = 'token inicial';
+  isLoggedIn = false;
+  isLoginFailed = false;
 
   login: any = {
     username: '',
@@ -30,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   submitted = false;
   // @Input() usuario:any;
-  constructor(private loginService: LoginService, private servicioPerfil: UserPerfilService) { }
+  constructor(private loginService: LoginService, private servicioPerfil: UserService) { }
 
   ngOnInit(): void {
   }
@@ -50,9 +52,12 @@ export class LoginComponent implements OnInit {
           console.log(response);
           window.sessionStorage.setItem("auth-token", this.token.token);
           window.sessionStorage.setItem("auth-username", this.login.username);
+          this.isLoginFailed = false;
+          this.isLoggedIn = true;
         },
         error => {
           console.log(error);
+          this.isLoginFailed = true;
         });
 
   }
