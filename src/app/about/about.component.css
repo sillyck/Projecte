@@ -8,8 +8,9 @@
 }
 
 .card {
+    margin-top: 15px;
     background-color: #222831;
-    height: 37rem;
+    height: 70vh;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -24,5 +25,13 @@ img {
 }
 
 .social-icons {
-    margin-top: 10px;
+    margin-top: 1px;
+    margin-right: 30px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1em;
 }
