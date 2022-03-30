@@ -56,12 +56,5 @@ export class LoginComponent implements OnInit {
         });
 
   }
-  sesionUsername = window.sessionStorage.getItem("auth-token");
-  sesionToken = window.sessionStorage.getItem("auth-username");
-  usuarioEntrante(){
-    //console.log(this.login.username)
-    this.servicioPerfil.disPerfil.emit({data:this.sesionUsername, data2:this.sesionToken
-    })
-  }
 
 }

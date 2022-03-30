@@ -15,8 +15,6 @@ export class MapaComponent {
   precio_max: number = 0;
   hoteles: any = null;
 
-  constructor(private hotelesService: HotelesService) {}
-
   ngOnInit(): void {
     this.hoteles.retornar()
       .subscribe( (result: any) => this.hoteles = result)

@@ -20,6 +20,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AgmCoreModule } from '@agm/core';
 import { PerfilComponent } from './perfil/perfil.component';
 import {HttpClientModule} from '@angular/common/http';
+import { authInterceptorProviders } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import {HttpClientModule} from '@angular/common/http';
     }),
     HttpClientModule
   ],
-  providers: [],
+  providers: [ authInterceptorProviders ],
   bootstrap: [AppComponent]
 })
 
