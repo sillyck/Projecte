@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { Router } from '@angular/router';
-import { UserPerfilService } from '../servicios/user-perfil.service';
 import { LoginService } from '../servicios/login.service';
 import { UserService } from '../servicios/user.service';
 import { Observable } from 'rxjs';
@@ -34,13 +33,8 @@ export class NavbarComponent implements OnInit {
   loggedIn: boolean = false;
 
   constructor(private loginService: LoginService, private userService: UserService) { }
-  public us:Array<any> = []
   user:any
   ngOnInit(): void {
-    // this.servicioPerfil.disPerfil.subscribe(data => {
-    //   console.log('Recibiendo datos...', data);
-    //   this.user.push(data);
-    // } )
     this.loginService.getUser$().subscribe(user => {
       this.user = user;
     });
@@ -61,10 +55,6 @@ export class NavbarComponent implements OnInit {
     this.mostrarRegister = this.mostrarRegister ? false : true;
   }
 
-  // quitarBoton() {
-  //   this.mostrarLogin = false;
-  //   this.mostrarRegister = false;
-  //   this.botonLogin = this.botonLogin ? true : false;
-  // }
+
 
 }
