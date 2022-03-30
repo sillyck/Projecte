@@ -1,22 +1,33 @@
-<div class="card fw-bold shadow">
-    <main class="form-signin">
-      <div class="submit-form">
-        <div *ngIf="!submitted">
-              <h1 class="h3 mb-3 fw-normal">Iniciar sessión</h1>
-          <div class="form-floating">
-            <input id="floatingInput" type="text" class="form-control" id="username" placeholder="123456" required [(ngModel)]="login.username" name="username">
-            <label for="floatingInput" class="form-label">Username</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="login.password" name="password">
-            <label for="floatingPassword" class="form-label">Password</label>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Inicia sessión</button>
+<!-- <div id="main" *ngIf="!submitted">
+    <div class="row justify-content-center my-auto">
+        <form class="col-md-2 col-10 my-5">
+            <div class="row justify-content-center"></div>
+            <img src="assets/logo.png" alt="" height="120px" width="120px" style="margin-left: 70px;">
+            <div class="form-group"> <label class="form-control-label text-muted">Username</label> <input type="text" id="email" name="email" placeholder="Usuario" class="form-control" required [(ngModel)]="login.username" name="username"> </div>
+            <div class="form-group"> <label class="form-control-label text-muted">Password</label> <input type="password" id="password" name="psw" placeholder="Contraseña" class="form-control" required [(ngModel)]="login.password" name="password"> </div>
+            <div class="row justify-content-center my-3 px-3"> <button type="submit" class="btn-block btn-color" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Iniciar sessión</button> </div>
+        </form>
+    </div>
+</div> -->
+
+<body>
+    <form>
+        <img src="assets/logo.png" height="70px" width="70px">
+
+        <br>
+
+        <label for="username"><b>Usuario</b></label>
+        <input type="text" placeholder="Usuario" id="username">
+
+        <br>
+
+        <label for="password"><b>Contraseña</b></label>
+        <input type="password" placeholder="Contraseña" id="password">
+
+        <div>
+            <button id="login" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Log In</button>
+            <hr>
+            <button id="register" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
         </div>
-        <!-- ; usuarioEntrante() -->
-        <!-- <div *ngIf="submitted">
-          <h4>Bienvenido {{login.username}}</h4>
-        </div> -->
-      </div>
-    </main>
-</div>
+    </form>
+</body>

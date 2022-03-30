@@ -1,13 +1,12 @@
 <nav class="navbar navbar-light" style="background-color: #a0c8d4; width: 100vw;">
     <div class="container d-flex flex-wrap">
-        <a class="navbar-brand imagen_logo" [routerLink]="['/home']"><img class="mb-4" src="../../../assets/logo.png" alt="" width="50" height="50"></a>
+        <a class="navbar-brand imagen_logo" [routerLink]="['/home']"><img class="mb-4" src="assets/logo.png" alt="" width="50" height="50"></a>
         <!-- <div *ngFor="let user of us">
           <p class="mt-3 ms-4">{{user.data2}}</p>
         </div> -->
         <ul class="nav menu">
-          <!-- <p *ngIf="user!=undefined" class="nav-link">{{user.username}}</p> -->
-          <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
+            <!-- <p *ngIf="user!=undefined" class="nav-link">{{user.username}}</p> -->
+            <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
         </ul>
     </div>
 </nav>
-

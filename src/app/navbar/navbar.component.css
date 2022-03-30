@@ -1,27 +1,26 @@
 .contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100vw;
-  height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 9vh;
 }
 
 .imagen_logo {
     margin-top: 8px;
 }
 
-
 nav {
-  height: 9.5vh;
+    height: 9.5vh;
 }
 
-.imagen_logo{
-  margin-top: -4px;
-  margin-left: 37px;
+.imagen_logo {
+    margin-top: -4px;
+    margin-left: 37px;
 }
 
 ul {
-  margin-top: -25px;
+    margin-top: -25px;
 }
 
 #login {
