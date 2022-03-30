@@ -30,6 +30,10 @@ export class LoginService {
     return this.http.get(`${baseUrl}/users/${name}`);
   }
 
+  // getUsuario() {
+  //   return this.http.get(`${baseUrl}/users/`);
+  // }
+
   add(data: any) {
     return this.http.post(`${baseUrl}/users/`, data);
   }
