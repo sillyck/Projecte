@@ -3,7 +3,7 @@
         <a class="navbar-brand imagen_logo" [routerLink]="['/home']"><img class="mb-4" src="assets/logo.png" alt="" width="60" height="60"></a>
         <ul class="nav menu">
             <li>
-                <p *ngIf="user!=undefined" class="nav-item btn btn-secondary" style="color:white" [routerLink]="['/perfil']"><b>{{user.username}}</b></p>
+                <p *ngIf="user!=undefined" style="color:white; cursor: pointer;" [routerLink]="['/perfil']"><b><img style="margin-bottom: -15px;" class="rounded-circle" src="assets/perfil.png" width="30" height="30"></b></p>
             </li>
             <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
         </ul>

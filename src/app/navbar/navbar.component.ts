@@ -33,6 +33,7 @@ export class NavbarComponent implements OnInit {
   loggedIn: boolean = false;
 
   constructor(private loginService: LoginService, private userService: UserService) { }
+  show: boolean = false;
   user:any
   ngOnInit(): void {
     this.user = this.loginService.getUser$()
@@ -48,6 +49,8 @@ export class NavbarComponent implements OnInit {
     this.mostrarLogin = this.mostrarLogin ? false : true;
   }
 
-
+  abrir() {
+    this.show = this.show ? false : true;
+  }
 
 }
