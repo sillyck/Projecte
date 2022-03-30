@@ -9,6 +9,10 @@ import { PerfilComponent } from './perfil/perfil.component';
 const routes: Routes = [
 
   {
+    path:'register',
+    component:RegisterComponent
+  },
+  {
     path:'about',
     component:AboutComponent
   },
