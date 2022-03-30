@@ -15,9 +15,13 @@ export class MapaComponent {
   precio_max: number = 0;
   hoteles: any = null;
 
+  constructor(private api:HotelesService){
+
+  }
+
   ngOnInit(): void {
-    this.hoteles.retornar()
-      .subscribe( (result: any) => this.hoteles = result)
+    this.api.retornar()
+      .subscribe( (result: any) => {this.hoteles = result;})
   }
 
   obtenerPrecio(e: any){
