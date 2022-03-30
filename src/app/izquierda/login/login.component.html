@@ -1,22 +1,25 @@
-<div class="card fw-bold shadow">
-    <main class="form-signin">
-      <div class="submit-form">
-        <div *ngIf="!submitted">
-              <h1 class="h3 mb-3 fw-normal">Iniciar sessión</h1>
-          <div class="form-floating">
-            <input id="floatingInput" type="text" class="form-control" id="username" placeholder="123456" required [(ngModel)]="login.username" name="username">
-            <label for="floatingInput" class="form-label">Username</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="login.password" name="password">
-            <label for="floatingPassword" class="form-label">Password</label>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Inicia sessión</button>
-        </div>
-        <!-- ; usuarioEntrante() -->
-        <!-- <div *ngIf="submitted">
-          <h4>Bienvenido {{login.username}}</h4>
-        </div> -->
-      </div>
-    </main>
-</div>
+<body>
+  <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && logUser()" #f="ngForm" novalidate>
+    <img src="assets/logo.png" height="70px" width="70px">
+    <br>
+
+    <label for="username"><b>Usuario</b></label>
+    <input type="text" placeholder="Usuario" id="username" required [(ngModel)]="login.username" name="username">
+    <br>
+
+    <label for="password"><b>Contraseña</b></label>
+    <input type="password" placeholder="Contraseña" id="password" required [(ngModel)]="login.password" name="password">
+    <div>
+        <button type="submit" id="login" (click)="logUser()">Log In</button>
+        <hr>
+        <button id="register" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
+    </div>
+    <div *ngIf="isLoginFailed">
+      <p style="color: red; text-align: center;">Fallo en el login</p>
+    </div>
+  </form>
+  <div *ngIf="isLoggedIn" id="si">
+    <h3 style="text-align: center;">Bienvenido <b>{{login.username}}</b></h3>
+    <button class="btn btn-success mt-5"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Continuar</button>
+  </div>
+</body>
