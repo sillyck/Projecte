@@ -1,5 +1,6 @@
 import { state, trigger, style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../servicios/login.service';
 
 @Component({
   selector: 'app-perfil',
@@ -18,13 +19,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private loginService: LoginService) { }
+  user:any
+  ape:any
   ngOnInit(): void {
-  }
+    this.user = this.loginService.getUser$();
 
-  escalar(){
-
+    this.loginService.getByName(this.user.username).subscribe(
+      data => {
+        this.ape = data;
+        console.log(this.ape);
+      }
+    )
   }
 
 }
