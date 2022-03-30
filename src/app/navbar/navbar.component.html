@@ -1,8 +1,10 @@
-<nav class="navbar navbar-light" style="background-color: #a0c8d4; width: 100vw;">
+<nav class="navbar navbar-light" style="background-color: #a0c8d4; width: 100vw; ">
     <div class="container d-flex flex-wrap">
-        <a class="navbar-brand imagen_logo" [routerLink]="['/home']"><img class="mb-4" src="assets/logo.png" alt="" width="50" height="50"></a>
+        <a class="navbar-brand imagen_logo" [routerLink]="['/home']"><img class="mb-4" src="assets/logo.png" alt="" width="60" height="60"></a>
         <ul class="nav menu">
-            <li><p *ngIf="user!=undefined" class="nav-item btn btn-secondary" style="color:white" [routerLink]="['/perfil']"><b>{{user.username}}</b></p></li>
+            <li>
+                <p *ngIf="user!=undefined" class="nav-item btn btn-secondary" style="color:white" [routerLink]="['/perfil']"><b>{{user.username}}</b></p>
+            </li>
             <li class="nav-item"><a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/about']" class="btn btn-primary">About</a></li>
         </ul>
     </div>
