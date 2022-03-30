@@ -1,21 +1,25 @@
 <body>
-    <form>
-        <img src="assets/logo.png" height="70px" width="70px">
+  <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && logUser()" #f="ngForm" novalidate>
+    <img src="assets/logo.png" height="70px" width="70px">
+    <br>
 
-        <br>
+    <label for="username"><b>Usuario</b></label>
+    <input type="text" placeholder="Usuario" id="username" required [(ngModel)]="login.username" name="username">
+    <br>
 
-        <label for="username"><b>Usuario</b></label>
-        <input type="text" placeholder="Usuario" id="username" required [(ngModel)]="login.username" name="username">
-
-        <br>
-
-        <label for="password"><b>Contraseña</b></label>
-        <input type="password" placeholder="Contraseña" id="password" required [(ngModel)]="login.password" name="password">
-
-        <div>
-            <button id="login" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Log In</button>
-            <hr>
-            <button id="register" (click)="logUser()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
-        </div>
-    </form>
+    <label for="password"><b>Contraseña</b></label>
+    <input type="password" placeholder="Contraseña" id="password" required [(ngModel)]="login.password" name="password">
+    <div>
+        <button type="submit" id="login" (click)="logUser()">Log In</button>
+        <hr>
+        <button id="register" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
+    </div>
+    <div *ngIf="isLoginFailed">
+      <p style="color: red; text-align: center;">Fallo en el login</p>
+    </div>
+  </form>
+  <div *ngIf="isLoggedIn" id="si">
+    <h3 style="text-align: center;">Bienvenido <b>{{login.username}}</b></h3>
+    <button class="btn btn-success mt-5"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/home']">Continuar</button>
+  </div>
 </body>
