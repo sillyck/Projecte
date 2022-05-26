@@ -1,38 +1,31 @@
 <body>
-    <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
-        <img src="assets/logo.png" height="70px" width="70px">
-        <br>
+  <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+      <img src="assets/logo.png" height="70px" width="70px">
+      <br>
 
-        <label for="username"><b>Nombre/Usuario</b></label>
-        <input type="text" placeholder="Usuario" id="username" required name="username">
-        <br>
+      <label for="username"><b>Nombre/Usuario</b></label>
+      <input type="text" placeholder="Usuario" id="username" required [(ngModel)]="usuario.username" name="username">
+      <br>
 
-        <label for="username"><b>Apellidos</b></label>
-        <input type="text" placeholder="Apellidos" id="username" required name="username">
-        <br>
+      <label for="Apellidos"><b>Apellidos</b></label>
+      <input type="text" placeholder="Apellidos" id="Apellidos" required [(ngModel)]="usuario.Apellidos" name="Apellidos">
+      <br>
 
-        <label for="username"><b>Edad</b></label>
-        <input type="text" placeholder="Edad" id="username" required name="username">
-        <br>
+      <label for="Edad"><b>Edad</b></label>
+      <input type="text" placeholder="Edad" id="Edad" required [(ngModel)]="usuario.Edad" name="Edad">
+      <br>
 
-        <label for="username"><b>Telefono</b></label>
-        <input type="text" placeholder="Telefono" id="username" required name="username">
-        <br>
+      <label for="Correo"><b>Correo</b></label>
+      <input type="text" placeholder="ejemplo@email.com" id="Correo" required [(ngModel)]="usuario.Correo" name="Correo">
+      <br>
 
-        <label for="username"><b>Correo</b></label>
-        <input type="text" placeholder="ejemplo@email.com" id="username" required name="username">
-        <br>
+      <label for="Telefono"><b>Telefono</b></label>
+      <input type="text" placeholder="Telefono" id="Telefono" required [(ngModel)]="usuario.Telefono" name="Telefono">
+      <br>
 
-        <label for="password"><b>Contraseña</b></label>
-        <input type="password" placeholder="Contraseña" id="password" required name="password">
-
-        <div>
-            <hr>
-            <button id="register" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
-        </div>
-        <div>
-            <br>
-            <p style="color: red; text-align: center;">Fallo al regitrarse</p>
-        </div>
-    </form>
+      <label for="password"><b>Contraseña</b></label>
+      <input type="password" placeholder="Contraseña" id="password" required [(ngModel)]="usuario.password" name="password">
+        <hr>
+        <button id="register" (click)="guardarUsuario()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']">Register</button>
+  </form>
 </body>

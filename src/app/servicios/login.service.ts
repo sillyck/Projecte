@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
-const baseUrl = 'https://reshotel.herokuapp.com';
+const baseUrl = 'https://reshotel.herokuapp.com/';
+
+
 
 export interface User {
   username: string,
-  password: string
+  password: any
 }
 @Injectable({
   providedIn: 'root'
@@ -23,19 +25,27 @@ export class LoginService {
   signup(data: any) {
     this.user = data;
     this.user$.next(this.user);
-    return this.http.post(`${baseUrl}/login`, data);
+    return this.http.post(baseUrl + `login`, data);
   }
 
   getByName(name: string): Observable<any> {
-    return this.http.get(`${baseUrl}/users/${name}`);
+    return this.http.get(baseUrl + `users/${name}`);
   }
 
-  // getUsuario() {
-  //   return this.http.get(`${baseUrl}/users/`);
-  // }
+  addUser(username: string, apellidos: string, edad: number, correo: string, telefono: string, password: any): Observable<any>
+  {
+    return this.http.post(baseUrl +`users/`, {
+      username,
+      apellidos,
+      edad,
+      correo,
+      telefono,
+      password
+    });
+  }
 
   add(data: any) {
-    return this.http.post(`${baseUrl}/users/`, data);
+    return this.http.post(baseUrl +`users/`, data);
   }
 
   // updateUser(user: any){
